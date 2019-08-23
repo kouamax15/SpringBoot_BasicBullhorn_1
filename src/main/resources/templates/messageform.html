@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+</head>
+<body>
+<form action="#" th:action="@{/process}" th:object="${message}" method="post">
+    Content :<input type="text" th:field="*{content}" />
+    <span th:if="${#fields.hasErrors('content')}"
+          th:errors="*{content}"></span> <br />
+    Publication Date :<input type="text" th:field="*{publicationdate}" />
+    <span th:if="${#fields.hasErrors('publicationdate')}"
+          th:errors="*{publicationdate}"></span> <br />
+    Sender :<input type="text" th:field="*{sender}" />
+    <span th:if="${#fields.hasErrors('sender')}"
+          th:errors="*{sender}"></span><br />
+    <br />
+    <input type="submit" value="Submit" />
+</form>
+
+</body>
+</html>
