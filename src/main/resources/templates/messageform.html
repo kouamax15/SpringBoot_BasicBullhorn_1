@@ -5,7 +5,11 @@
     <title>Title</title>
 </head>
 <body>
-<form action="#" th:action="@{/process}" th:object="${message}" method="post">
+
+
+<form method="POST" action="{/add}" th:object="${message}"
+    enctype="multipart/form-data">
+    <input type="hidden" th:field="*{id}" />
     Content :<input type="text" th:field="*{content}" />
     <span th:if="${#fields.hasErrors('content')}"
           th:errors="*{content}"></span> <br />

@@ -23,6 +23,8 @@ public class Message {
 
     @NotNull
     private String sender;
+    @NotNull
+    private String image;
 
     public long getId() {
         return id;
@@ -54,5 +56,13 @@ public class Message {
 
     public void setSender(String sender) {
         this.sender = sender;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }
